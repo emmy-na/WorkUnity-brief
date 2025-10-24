@@ -1,0 +1,17 @@
+composer create-project laravel/laravel workunity
+cd workunity
+php artisan key:generate
+php artisan make:migration create_employees_table --create=employees
+php artisan make:model Employee -mf
+php artisan make:factory EmployeeFactory --model=Employee
+php artisan make:seeder EmployeesTableSeeder
+php artisan migrate --seed
+php artisan make:controller EmployeeController --resource
+mkdir -p resources/views/employees resources/views/layouts
+touch resources/views/layouts/app.blade.php
+touch resources/views/employees/index.blade.php
+touch resources/views/employees/create.blade.php
+touch resources/views/employees/edit.blade.php
+touch resources/views/employees/show.blade.php
+touch resources/views/employees/_form.blade.php
+php artisan serve

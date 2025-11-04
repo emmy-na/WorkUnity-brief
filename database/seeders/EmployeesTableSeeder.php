@@ -16,12 +16,6 @@ class EmployeesTableSeeder extends Seeder
         
         Employee::factory()->count(50)->create();
 
-        // exemple d'employé réel/admin
-        Employee::create([
-            'first_name' => 'Admin',
-            'last_name'  => 'WorkUnity',
-            'email'      => 'admin@workunity.local',
-            'position'   => 'Administrateur',
-        ]);
+    
     }
 }

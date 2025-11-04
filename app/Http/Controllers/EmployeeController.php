@@ -14,7 +14,7 @@ class EmployeeController extends Controller
 
     public function create()
     {
-        // Pas besoin de passer un modèle existant ici, mais tu peux si tu veux
+        
         return view('create');
     }
 
@@ -29,7 +29,7 @@ class EmployeeController extends Controller
 
         Employee::create($data);
 
-        // Redirect vers la liste avec le nom correct de route
+        
         return redirect()->route('employees.index')->with('success', 'Employé ajouté.');
     }
 
